@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: ostrich-sans;
-    src: url(./fonts/ostrich-sans//ostrich-regular.ttf);
+    src: url(./fonts/ostrich-sans//ostrich-regular.ttf) ;
 }
 @font-face {
     font-family: ostrich-sans-bold;
@@ -16,13 +16,10 @@
 
 html {
     background-color: var(--bg-color);
-    background: linear-gradient(var(--bg-color) 1%, var(--bg-color-secondary) 100%);
+    background: linear-gradient(var(--bg-color-secondary) 1%, var(--bg-color) 100%);
     min-height: 100%;
-
-}
-
-body {
     color: var(--highlight);
+    font-family: 'Courier New', Courier, monospace;
 }
 
 header {
@@ -32,7 +29,7 @@ header {
     margin-bottom: 30px;
 }
 
-header > h1 {
+header>h1 {
     margin: auto;
     width: auto;
     font-size: 4em;
@@ -40,8 +37,20 @@ header > h1 {
     font-family: ostrich-sans-bold;
 }
 
+footer {
+    background: black;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 8px;
+    line-height: 1.4em;
+}
+
 button {
-    font-size: 1.4em;;
+    font-size: 1.4em;
+    ;
     background-color: var(--highlight);
 }
 
@@ -52,6 +61,7 @@ spacer {
 textarea {
     background-color: black;
     padding: 10px;
+    word-spacing: 0.15em;
 }
 
 .two-columns {
@@ -61,7 +71,7 @@ textarea {
     align-items: top;
 }
 
-.two-columns > .col {
+.two-columns>.col {
     width: 45%;
     display: flex;
     flex-direction: column;
@@ -74,3 +84,10 @@ textarea {
     color: var(--font-color);
 }
 
+a {
+    color: white;
+}
+
+a:visited {
+    color: lightgray;
+}
