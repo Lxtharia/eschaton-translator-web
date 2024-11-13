@@ -1,0 +1,76 @@
+:root {
+    --bg-color: #29060A;
+    --bg-color-secondary: #632028;
+    --font-color: #CEADDA;
+    --highlight: #E0B364;
+}
+
+@font-face {
+    font-family: ostrich-sans;
+    src: url(./fonts/ostrich-sans//ostrich-regular.ttf);
+}
+@font-face {
+    font-family: ostrich-sans-bold;
+    src: url(./fonts/ostrich-sans//OstrichSans-Bold.otf);
+}
+
+html {
+    background-color: var(--bg-color);
+    background: linear-gradient(var(--bg-color) 1%, var(--bg-color-secondary) 100%);
+    min-height: 100%;
+
+}
+
+body {
+    color: var(--highlight);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header > h1 {
+    margin: auto;
+    width: auto;
+    font-size: 4em;
+    font-weight: lighter;
+    font-family: ostrich-sans-bold;
+}
+
+button {
+    font-size: 1.4em;;
+    background-color: var(--highlight);
+}
+
+spacer {
+    margin: 20px;
+}
+
+textarea {
+    background-color: black;
+    padding: 10px;
+}
+
+.two-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+}
+
+.two-columns > .col {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.eschaton-text {
+    font-family: ostrich-sans;
+    font-size: 3em;
+    color: var(--font-color);
+}
+

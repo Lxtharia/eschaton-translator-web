@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head lang="de">
+    <title>ESCHATON TRANSLATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src=words_and_letters.js></script>
+    <script src=translator.js></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Prism&family=Xanh+Mono:ital@0;1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <script>
+        function doTranslate() {
+            let intext = document.getElementById("eschaton-input");
+            let outtext = document.getElementById("eschaton-output");
+            let translated = translate_string(intext.value);
+            console.log(`Translated '${intext.value}' to '${translated}'`);
+            outtext.value = translated;
+        }
+    </script>
+    <header>
+        <h1>YEAH</h1>
+    </header>
+
+    <content>
+        <div class="two-columns">
+            <div class="left col">
+                <textarea id="eschaton-input" class="eschaton-text">hello Eshe</textarea>
+                <spacer></spacer>
+                <button onclick="doTranslate()">Translate</button>
+            </div>
+            <p>=&gt;</p>
+            <div class="right col">
+                <textarea id="eschaton-output" disabled class="eschaton-text"></textarea>
+                <spacer></spacer>
+                <button>Copy text</button>
+            </div>
+        </div>
+    </content>
+
+    <footer>
+    </footer>
+</body>
