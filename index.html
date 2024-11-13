@@ -22,10 +22,20 @@
             console.log(`Translated '${intext.value}' to '${translated}'`);
             outtext.value = translated;
         }
+
+        async function setClipboard(text) {
+            const type = "text/plain";
+            const blob = new Blob([text], {type});
+            const data = [new ClipboardItem({[type]: blob})];
+            await navigator.clipboard.write(data);
+        }
     </script>
     <header>
         <h1>ESCHATON TRANSLATOR</h1>
     </header>
+    <noscript>
+        <h3>You need to have javascript enabled for this to work</h3>
+    </noscript>
 
     <content>
         <div class="two-columns">
@@ -38,7 +48,7 @@
             <div class="right col">
                 <textarea id="eschaton-output" disabled class="eschaton-text"></textarea>
                 <spacer></spacer>
-                <button>Copy text</button>
+                <button onclick="setClipboard(document.getElementById('eschaton-output').value)">Copy text</button>
             </div>
         </div>
     </content>
@@ -49,6 +59,6 @@
         Check out the source on <a href="https://github.com/Lxtharia/eschaton-translator-web">Github</a>
         | Dictionary stolen from <a href="https://github.com/fdclavel/eschaton-translator">here</a>
         <br>
-        Font used: Ostrich Sans (<a href="fonts/ostrich-sans/LICENSE">License</a>)
+        Font used: Ostrich Sans (<a href="fonts/ostrich-sans/LICENSE.txt">License</a>)
     </footer>
 </body>
